@@ -147,7 +147,8 @@ public class Driver {
     DriverOptions options = new DriverOptions(args);
 
     if (options.command == null) {
-      System.err.println("CSV to parquet converter V0.0.3");
+      System.err.println("CSV to parquet converter parquet 1.10.0  orc 1.5.3 ");
+      System.err.println();     
       System.err.println();
       System.err.println("usage: java -jar csv2parquet*.jar [--help]" + " [--define X=Y] <command> <args>");
       System.err.println();
@@ -156,6 +157,7 @@ public class Driver {
       System.err.println("   data - print the data from the ORC/Parquet file");
       System.err.println("   scan - scan the ORC/Parquet file");
       System.err.println("   convert - convert CSV to ORC/Parquet");
+      System.err.println("   schema - print schema of /Parquet file");      
       System.err.println("   json-schema - scan JSON files to determine their schema");
       System.err.println();
       System.err.println("To get more help, provide -h to the command");

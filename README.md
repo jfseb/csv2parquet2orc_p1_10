@@ -1,7 +1,9 @@
-# csv2parquet   [![Build Status](https://travis-ci.org/jfseb/csv2parquet2orc.svg?branch=master)](https://travis-ci.org/jfseb/csv2parquet2orc)
+# csv2parquet2orc_p1_10   [![Build Status](https://travis-ci.org/jfseb/csv2parquet2orc_p1_10.svg?branch=master)](https://travis-ci.org/jfseb/csv2parquet2orc_p1_10)
 
 CSV 2 Parquet and CSV 2 ORC converter 
 (blend of individual tools with aligned interface) 
+
+(Parquet 1.10.x, ORC 1.5.x)
 
 - csv to parquet conversion
 - csv to orc conversion

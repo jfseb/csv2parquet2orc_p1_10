@@ -25,6 +25,17 @@
 			</properties>
 		</profile>
 		<profile>
+			<id>unix</id>
+			<activation>
+				<os>
+					<family>unix</family>
+				</os>
+			</activation>
+			<properties>
+				<toolsjar>${java.home}/../lib/tools.jar</toolsjar>
+			</properties>
+		</profile>
+		<profile>
 			<id>osx_profile</id>
 			<activation>
 				<os>

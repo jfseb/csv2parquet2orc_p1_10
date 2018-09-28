@@ -8,25 +8,25 @@ Type: struct<cust_key:int,name:string,address:string,nation_keys:smallint,phone:
 Stripe Statistics:
   Stripe 1:
     Column 0: count: 150000 hasNull: false
-    Column 1: count: 150000 hasNull: false min: 1 max: 150000 sum: 11250075000
-    Column 2: count: 150000 hasNull: false min: Customer#000000001 max: Customer#000150000 sum: 2700000
-    Column 3: count: 150000 hasNull: false min:    2uZwVhQvwA max: zzxGktzXTMKS1BxZlgQ9nqQ sum: 3758056
-    Column 4: count: 150000 hasNull: false min: 0 max: 24 sum: 1801005
-    Column 5: count: 150000 hasNull: false min: 10-100-106-1617 max: 34-999-618-6881 sum: 2250000
-    Column 6: count: 150000 hasNull: false min: -999.99 max: 9999.99 sum: 6.743268497399992E8
-    Column 7: count: 150000 hasNull: false min: AUTOMOBILE max: MACHINERY sum: 1349610
-    Column 8: count: 150000 hasNull: false min:  Tiresias according to the slyly blithe instructions detect quickly at the slyly express courts. express dinos wake  max: zzle. blithely regular instructions cajol sum: 10876099
+    Column 1: count: 150000 hasNull: false bytesOnDisk: 417 min: 1 max: 150000 sum: 11250075000
+    Column 2: count: 150000 hasNull: false bytesOnDisk: 378199 min: Customer#000000001 max: Customer#000150000 sum: 2700000
+    Column 3: count: 150000 hasNull: false bytesOnDisk: 3008712 min:    2uZwVhQvwA max: zzxGktzXTMKS1BxZlgQ9nqQ sum: 3758056
+    Column 4: count: 150000 hasNull: false bytesOnDisk: 99315 min: 0 max: 24 sum: 1801005
+    Column 5: count: 150000 hasNull: false bytesOnDisk: 1095755 min: 10-100-106-1617 max: 34-999-618-6881 sum: 2250000
+    Column 6: count: 150000 hasNull: false bytesOnDisk: 634513 min: -999.99 max: 9999.99 sum: 6.743268497399992E8
+    Column 7: count: 150000 hasNull: false bytesOnDisk: 58243 min: AUTOMOBILE max: MACHINERY sum: 1349610
+    Column 8: count: 150000 hasNull: false bytesOnDisk: 2818808 min:  Tiresias according to the slyly blithe instructions detect quickly at the slyly express courts. express dinos wake  max: zzle. blithely regular instructions cajol sum: 10876099
 
 File Statistics:
   Column 0: count: 150000 hasNull: false
-  Column 1: count: 150000 hasNull: false min: 1 max: 150000 sum: 11250075000
-  Column 2: count: 150000 hasNull: false min: Customer#000000001 max: Customer#000150000 sum: 2700000
-  Column 3: count: 150000 hasNull: false min:    2uZwVhQvwA max: zzxGktzXTMKS1BxZlgQ9nqQ sum: 3758056
-  Column 4: count: 150000 hasNull: false min: 0 max: 24 sum: 1801005
-  Column 5: count: 150000 hasNull: false min: 10-100-106-1617 max: 34-999-618-6881 sum: 2250000
-  Column 6: count: 150000 hasNull: false min: -999.99 max: 9999.99 sum: 6.743268497399992E8
-  Column 7: count: 150000 hasNull: false min: AUTOMOBILE max: MACHINERY sum: 1349610
-  Column 8: count: 150000 hasNull: false min:  Tiresias according to the slyly blithe instructions detect quickly at the slyly express courts. express dinos wake  max: zzle. blithely regular instructions cajol sum: 10876099
+  Column 1: count: 150000 hasNull: false bytesOnDisk: 417 min: 1 max: 150000 sum: 11250075000
+  Column 2: count: 150000 hasNull: false bytesOnDisk: 378199 min: Customer#000000001 max: Customer#000150000 sum: 2700000
+  Column 3: count: 150000 hasNull: false bytesOnDisk: 3008712 min:    2uZwVhQvwA max: zzxGktzXTMKS1BxZlgQ9nqQ sum: 3758056
+  Column 4: count: 150000 hasNull: false bytesOnDisk: 99315 min: 0 max: 24 sum: 1801005
+  Column 5: count: 150000 hasNull: false bytesOnDisk: 1095755 min: 10-100-106-1617 max: 34-999-618-6881 sum: 2250000
+  Column 6: count: 150000 hasNull: false bytesOnDisk: 634513 min: -999.99 max: 9999.99 sum: 6.743268497399992E8
+  Column 7: count: 150000 hasNull: false bytesOnDisk: 58243 min: AUTOMOBILE max: MACHINERY sum: 1349610
+  Column 8: count: 150000 hasNull: false bytesOnDisk: 2818808 min:  Tiresias according to the slyly blithe instructions detect quickly at the slyly express courts. express dinos wake  max: zzle. blithely regular instructions cajol sum: 10876099
 
 Stripes:
   Stripe: offset: 3 data: 8093962 rows: 150000 tail: 162 index: 4320
@@ -63,7 +63,7 @@ Stripes:
     Encoding column 7: DICTIONARY_V2[5]
     Encoding column 8: DIRECT_V2
 
-File length: 8099355 bytes
+File length: 8099433 bytes
 Padding length: 0 bytes
 Padding ratio: 0%
 ________________________________________________________________________________________________________________________

@@ -8,19 +8,19 @@ Type: struct<adate:date,anotherdate:date,atime_millis:smallint,btime_millis:smal
 Stripe Statistics:
   Stripe 1:
     Column 0: count: 3 hasNull: false
-    Column 1: count: 3 hasNull: false min: 2017-03-05 max: 2017-07-07
-    Column 2: count: 3 hasNull: false min: 1915-12-22 max: 2025-02-11
-    Column 3: count: 3 hasNull: false min: 85530000000 max: 85530000000 sum: 256590000000
-    Column 4: count: 3 hasNull: false min: 85530000123 max: 85530000423 sum: 256590000669
-    Column 5: count: 3 hasNull: false min: 85530123456 max: 85530654321 sum: 256590901233
+    Column 1: count: 3 hasNull: false bytesOnDisk: 11 min: 2017-03-05 max: 2017-07-07
+    Column 2: count: 3 hasNull: false bytesOnDisk: 11 min: 1915-12-22 max: 2025-02-11
+    Column 3: count: 3 hasNull: false bytesOnDisk: 9 min: 85530000000 max: 85530000000 sum: 256590000000
+    Column 4: count: 3 hasNull: false bytesOnDisk: 17 min: 85530000123 max: 85530000423 sum: 256590000669
+    Column 5: count: 3 hasNull: false bytesOnDisk: 18 min: 85530123456 max: 85530654321 sum: 256590901233
 
 File Statistics:
   Column 0: count: 3 hasNull: false
-  Column 1: count: 3 hasNull: false min: 2017-03-05 max: 2017-07-07
-  Column 2: count: 3 hasNull: false min: 1915-12-22 max: 2025-02-11
-  Column 3: count: 3 hasNull: false min: 85530000000 max: 85530000000 sum: 256590000000
-  Column 4: count: 3 hasNull: false min: 85530000123 max: 85530000423 sum: 256590000669
-  Column 5: count: 3 hasNull: false min: 85530123456 max: 85530654321 sum: 256590901233
+  Column 1: count: 3 hasNull: false bytesOnDisk: 11 min: 2017-03-05 max: 2017-07-07
+  Column 2: count: 3 hasNull: false bytesOnDisk: 11 min: 1915-12-22 max: 2025-02-11
+  Column 3: count: 3 hasNull: false bytesOnDisk: 9 min: 85530000000 max: 85530000000 sum: 256590000000
+  Column 4: count: 3 hasNull: false bytesOnDisk: 17 min: 85530000123 max: 85530000423 sum: 256590000669
+  Column 5: count: 3 hasNull: false bytesOnDisk: 18 min: 85530123456 max: 85530654321 sum: 256590901233
 
 Stripes:
   Stripe: offset: 3 data: 66 rows: 3 tail: 60 index: 178
@@ -42,7 +42,7 @@ Stripes:
     Encoding column 4: DIRECT_V2
     Encoding column 5: DIRECT_V2
 
-File length: 599 bytes
+File length: 622 bytes
 Padding length: 0 bytes
 Padding ratio: 0%
 ________________________________________________________________________________________________________________________

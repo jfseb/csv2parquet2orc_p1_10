@@ -8,21 +8,21 @@ Type: struct<along:int,aname:string,anint32:smallint,adouble:double,afloat:float
 Stripe Statistics:
   Stripe 1:
     Column 0: count: 3 hasNull: false
-    Column 1: count: 3 hasNull: false min: 1 max: 1 sum: 3
-    Column 2: count: 3 hasNull: false min: Customer#000000001 max: Customer#000000001 sum: 54
-    Column 3: count: 3 hasNull: false min: 123 max: 123 sum: 369
-    Column 4: count: 3 hasNull: false min: 11.22 max: 11.22 sum: 33.660000000000004
-    Column 5: count: 3 hasNull: false min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
-    Column 6: count: 3 hasNull: false min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0
+    Column 1: count: 3 hasNull: false bytesOnDisk: 5 min: 1 max: 1 sum: 3
+    Column 2: count: 3 hasNull: false bytesOnDisk: 28 min: Customer#000000001 max: Customer#000000001 sum: 54
+    Column 3: count: 3 hasNull: false bytesOnDisk: 5 min: 123 max: 123 sum: 369
+    Column 4: count: 3 hasNull: false bytesOnDisk: 16 min: 11.22 max: 11.22 sum: 33.660000000000004
+    Column 5: count: 3 hasNull: false bytesOnDisk: 11 min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
+    Column 6: count: 3 hasNull: false bytesOnDisk: 21 min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0 min UTC: 2017-03-02 01:13:30.0 max UTC: 2017-07-08 01:45:30.0
 
 File Statistics:
   Column 0: count: 3 hasNull: false
-  Column 1: count: 3 hasNull: false min: 1 max: 1 sum: 3
-  Column 2: count: 3 hasNull: false min: Customer#000000001 max: Customer#000000001 sum: 54
-  Column 3: count: 3 hasNull: false min: 123 max: 123 sum: 369
-  Column 4: count: 3 hasNull: false min: 11.22 max: 11.22 sum: 33.660000000000004
-  Column 5: count: 3 hasNull: false min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
-  Column 6: count: 3 hasNull: false min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0
+  Column 1: count: 3 hasNull: false bytesOnDisk: 5 min: 1 max: 1 sum: 3
+  Column 2: count: 3 hasNull: false bytesOnDisk: 28 min: Customer#000000001 max: Customer#000000001 sum: 54
+  Column 3: count: 3 hasNull: false bytesOnDisk: 5 min: 123 max: 123 sum: 369
+  Column 4: count: 3 hasNull: false bytesOnDisk: 16 min: 11.22 max: 11.22 sum: 33.660000000000004
+  Column 5: count: 3 hasNull: false bytesOnDisk: 11 min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
+  Column 6: count: 3 hasNull: false bytesOnDisk: 21 min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0 min UTC: 2017-03-02 01:13:30.0 max UTC: 2017-07-08 01:45:30.0
 
 Stripes:
   Stripe: offset: 3 data: 86 rows: 3 tail: 106 index: 214
@@ -50,7 +50,7 @@ Stripes:
     Encoding column 5: DIRECT
     Encoding column 6: DIRECT_V2
 
-File length: 800 bytes
+File length: 824 bytes
 Padding length: 0 bytes
 Padding ratio: 0%
 ________________________________________________________________________________________________________________________

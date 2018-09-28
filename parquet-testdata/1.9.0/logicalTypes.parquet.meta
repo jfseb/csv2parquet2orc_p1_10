@@ -1,4 +1,4 @@
-file:         file:/E:/projects/parquet/csv2parquet/parquet-testdata/1.9.0/logicalTypes.plain.parquet 
+file:         file:/E:/projects/parquet/csv2parquet2orc_p1_10/parquet-testdata/1.9.0/logicalTypes.plain.parquet 
 creator:      parquet-mr version 1.9.0 (build 38262e2c80015d0935dad20f8e18f2d6f9fbd03c) 
 
 file schema:  m 
@@ -11,8 +11,8 @@ atime_micros: OPTIONAL INT64 O:TIME_MICROS R:0 D:1
 
 row group 1:  RC:2 TS:251 OFFSET:4 
 --------------------------------------------------------------------------------
-adate:         INT32 UNCOMPRESSED DO:0 FPO:4 SZ:47/47/1.00 VC:2 ENC:PLAIN,BIT_PACKED,RLE
-anotherdate:   INT32 UNCOMPRESSED DO:0 FPO:51 SZ:47/47/1.00 VC:2 ENC:PLAIN,BIT_PACKED,RLE
-atime_millis:  INT32 UNCOMPRESSED DO:0 FPO:98 SZ:47/47/1.00 VC:2 ENC:PLAIN,BIT_PACKED,RLE
-btime_millis:  INT32 UNCOMPRESSED DO:0 FPO:145 SZ:47/47/1.00 VC:2 ENC:PLAIN,BIT_PACKED,RLE
-atime_micros:  INT64 UNCOMPRESSED DO:0 FPO:192 SZ:63/63/1.00 VC:2 ENC:PLAIN,BIT_PACKED,RLE
+adate:         INT32 UNCOMPRESSED DO:0 FPO:4 SZ:47/47/1.00 VC:2 ENC:BIT_PACKED,RLE,PLAIN ST:[min: 2017-07-07, max: 2017-07-07, num_nulls: 0]
+anotherdate:   INT32 UNCOMPRESSED DO:0 FPO:51 SZ:47/47/1.00 VC:2 ENC:BIT_PACKED,RLE,PLAIN ST:[min: 1915-12-22, max: 2025-02-11, num_nulls: 0]
+atime_millis:  INT32 UNCOMPRESSED DO:0 FPO:98 SZ:47/47/1.00 VC:2 ENC:BIT_PACKED,RLE,PLAIN ST:[min: 23:45:30.000, max: 23:45:30.000, num_nulls: 0]
+btime_millis:  INT32 UNCOMPRESSED DO:0 FPO:145 SZ:47/47/1.00 VC:2 ENC:BIT_PACKED,RLE,PLAIN ST:[min: 23:45:30.123, max: 23:45:30.123, num_nulls: 0]
+atime_micros:  INT64 UNCOMPRESSED DO:0 FPO:192 SZ:63/63/1.00 VC:2 ENC:BIT_PACKED,RLE,PLAIN ST:[min: 23:45:30.123456, max: 23:45:30.123456, num_nulls: 0]

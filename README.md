@@ -12,11 +12,13 @@ CSV 2 Parquet and CSV 2 ORC converter
 - control some serialization formats (e.g. Strip size/BLock length, dictionary enable/disable) 
 
 - special features for generating test data
-  ** allows binary notation of input in CSV 
+
+  * allows binary notation of input in CSV 
     to force specific values into the parquet/orc file for test purposes
     (e.g. various float/double NAN, "out of range" int96 julian dates, other dates/timestamp, broken or 
     wrong encoded unicode charaters etc.)
-  ** allows to write int96 "Impala" timestamps
+
+  * allows to write int96 "Impala" timestamps
 
 # version of tools
 
@@ -31,11 +33,11 @@ CSV 2 Parquet and CSV 2 ORC converter
 <!-- toc -->
 * [build](#build)
 * [run](#run)
-* [csv to parquet](#csv to parquet)  
-* [csv to orc](#csv to orc) 
-* [example schemas](#example schemas) 
-* [running on windows](#running on windows)
-* [parquet Int96 timestamp](#parquet Int96 timestamp)
+* [csv to parquet](#csv-to-parquet)  
+* [csv to orc](#csv-to-orc) 
+* [example schemas](#example-schemas) 
+* [running on windows](#running-on-windows)
+* [parquet Int96 timestamp](#parquet-Int96-timestamp)
 <!-- tocstop -->
 
 

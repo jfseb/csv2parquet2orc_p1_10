@@ -148,12 +148,9 @@ public class Driver {
 
     if (options.command == null) {
       System.err.println("CSV to parquet converter parquet 1.10.x  orc 1.5.x ");
-      System.err.println("For other writer/reader versions:\n")
-      System.err.println(" - https://github.com/jfseb/csv2parquet2orc       (parquet 1.9.x orc  1.4");
-      System.err.println(" * https://github.com/jfseb/csv2parquet2orc_p1_10 (parquet 1.10.x orc 1.5x");
       System.err.println();     
       System.err.println();
-      System.err.println("usage: java -jar csv2parquet*.jar [--help]" + " [--define X=Y] <command> <args>");
+      System.err.println("usage: java -jar csv2parquet2orc*.jar [--help]" + " [--define X=Y] <command> <args>");
       System.err.println();
       System.err.println("Commands:");
       System.err.println("   meta - print the metadata about the ORC/Parquet file");
@@ -163,7 +160,15 @@ public class Driver {
       System.err.println("   schema - print schema of /Parquet file");      
       System.err.println("   json-schema - scan JSON files to determine their schema");
       System.err.println();
+      System.err.println(" examples: ");
+      System.err.println(" java -jar target/csv2parquet2orc*-jar-with-dependencies.jar  -D csvformat=binary convert parquet-testdata/csvbinary/csvbinary.csv -s parquet-testdata/csvbinary/csvbinary.parquet.schema  -o out.parquet  -S\"|\" ");
+      System.err.println(" java -jar target/csv2parquet2orc*-jar-with-dependencies.jar  meta out.parquet ");    
+      System.err.println();
       System.err.println("To get more help, provide -h to the command");
+      System.err.println();
+      System.err.println("For other writer/reader versions, see");
+      System.err.println(" - https://github.com/jfseb/csv2parquet2orc       (parquet  1.9.x ; orc 1.4.x)");
+      System.err.println(" - https://github.com/jfseb/csv2parquet2orc_p1_10 (parquet 1.10.x ; orc 1.5.x)");      
       System.exit(1);
     }
     Configuration conf = new Configuration();

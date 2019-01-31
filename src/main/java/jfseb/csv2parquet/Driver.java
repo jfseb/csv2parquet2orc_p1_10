@@ -22,6 +22,7 @@
 
 package jfseb.csv2parquet;
 
+import java.io.File;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Locale;
@@ -38,9 +39,10 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.orc.tools.FileDump;
 import org.apache.parquet.tools.Main;
 
+import jfseb.csv2parquet.convert.ConvertToolBase.Format;
 import jfseb.csv2parquet.convert.ConvertToolOrc;
 import jfseb.csv2parquet.convert.ConvertToolParquet;
-import jfseb.csv2parquet.convert.ConvertToolBase.Format;
+import jfseb.csv2parquet.convert.ConvertUtils;
 import jfseb.csv2parquet.parquet.DumpMeta;
 import jfseb.csv2parquet.parquet.DumpSchema;
 
@@ -156,7 +158,7 @@ public class Driver {
       System.err.println("   meta - print the metadata about the ORC/Parquet file");
       System.err.println("   data - print the data from the ORC/Parquet file");
       System.err.println("   scan - scan the ORC/Parquet file");
-      System.err.println("   convert - convert CSV to ORC/Parquet");
+      System.err.println("   convert - convert CSV to ORC/Parquet, or Parquet to CSV");
       System.err.println("   schema - print schema of /Parquet file");      
       System.err.println("   json-schema - scan JSON files to determine their schema");
       System.err.println();
@@ -216,7 +218,20 @@ public class Driver {
       org.apache.orc.tools.json.JsonSchemaFinder.main(conf, options.commandArgs);
     } else if ("convert".equals(options.command)) {
       // getInput(args)
-      if (isOrc(getOutput(args))) {
+      if (isParquet(getInput(args)))
+      {
+        if(!isCSV(getOutput(args)))
+        {
+          throw new IllegalStateException("output must be specified and of type csv, e.g. \"convert xx.parquet -o xx.csv\"");
+        }
+        File parquetFile = new File(getInput(args));
+        File csvFile= new File(getOutput(args));
+        ConvertUtils.convertParquetToCSV( parquetFile, csvFile );
+      }
+      else if (isOrc(getInput(args)))
+      {
+        throw new IllegalStateException("Convert orc to csv is not supported");
+      } else if (isOrc(getOutput(args))) {
         ConvertToolOrc.main(conf, options.commandArgs);
       } else {
         ConvertToolParquet.main(conf, options.commandArgs);
@@ -232,5 +247,17 @@ public class Driver {
       return false;
     }
     return "orc".equals(FilenameUtils.getExtension(filename).toLowerCase());
+  }
+  private static boolean isCSV(String filename) {
+    if (filename == null) {
+      return false;
+    }
+    return "csv".equals(FilenameUtils.getExtension(filename).toLowerCase());
+  }
+  private static boolean isParquet(String filename) {
+    if (filename == null) {
+      return false;
+    }
+    return "parquet".equals(FilenameUtils.getExtension(filename).toLowerCase());
   }
 }

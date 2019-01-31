@@ -13,7 +13,7 @@ CSV 2 Parquet and CSV 2 ORC converter
 
 - special features for generating test data
 
-  * allows binary notation of input in CSV 
+  * allows binary notation of input in CSV
     to force specific values into the parquet/orc file for test purposes
     (e.g. various float/double NAN, "out of range" int96 julian dates, other dates/timestamp, broken or 
     wrong encoded unicode charaters etc.)
@@ -107,15 +107,15 @@ java -jar csv2parquet2orc-0.0.2-*   convert  -D orc.compression=ZIP   input.csv 
 
 the following is a subset of options
 
-| option | option example | parquet | orc | Comment
-| --- | --- | --- | --- |
-| explicit schema file spec | -s abc.schema.orc | yes | yes |
-| Skip header lines | -H 1 | yes | yes |
-| Separator | -S '\|' | yes | yes | 
-| Binary 0x12EFx0 (1) |  -Dcsvformat=binary | yes | yes(2) |
+| option | option example | parquet | orc | Comment |
+| --- | --- | --- | --- | --- |
+| explicit schema file spec | -s abc.schema.orc | yes | yes | |
+| Skip header lines | -H 1 | yes | yes | |
+| Separator | -S '\|' | yes | yes |  |
+| Binary 0x12EFx0 (1) |  -Dcsvformat=binary | yes | yes(2) | |
 
 
- * (1) -D csvformat=binary shall be entered before the command  |
+ * (1) -D csvformat=binary shall be entered before the command
  * (2) Timestamp and decimal writing for orc via semi-typed classes of orc reader which may limit 
        full byte range
 
@@ -158,8 +158,8 @@ java -jar csv2parquet2orc-0.0.2-*   meta  abc.orc
 
 # notes
 
-The project is built on parquet 1.9.0 
-and orc 1.4 
+The project is built on parquet 1.10.0 
+and orc 1.5 
 using sources from [https://github.com/Parquet/parquet-compatibility]
 and                [https://github.com/apache/orc/tree/master/tools]
 

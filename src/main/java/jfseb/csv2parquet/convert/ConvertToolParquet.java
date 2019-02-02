@@ -105,6 +105,7 @@ public class ConvertToolParquet extends ConvertToolBase {
         codecName = CompressionCodecName.GZIP;
       } else if ("SNAPPY".equals(cmdline)) {
         codecName = CompressionCodecName.SNAPPY;
+        System.err.println("Choose snappy" + codecName.toString() );
       } else if ("NONE".equals(cmdline) || "UNCOMPRESSED".equals(cmdline)) {
         codecName = CompressionCodecName.UNCOMPRESSED;
       } else {
@@ -115,6 +116,11 @@ public class ConvertToolParquet extends ConvertToolBase {
       enableDictionary = conf.getBoolean("parquet.enabledictionary", enableDictionary);
     }
 
+    System.err.println("parquet.BLOCK_SIZE=" + Integer.toString(block_size) ); 
+    System.err.println("parquet.PAGE_SIZE=" + Integer.toString(page_size) );
+    System.err.println("parquet.enabledictionary=" + Boolean.toString(enableDictionary));
+    System.err.println("parquet.compress=" + codecName.toString() );
+    
     VectorizedRowBatch batch;
     this.uschema = SchemaCreator.makeSchema(new java.io.File(fileList.get(0).getPath().toString()), this.schemaString);
 

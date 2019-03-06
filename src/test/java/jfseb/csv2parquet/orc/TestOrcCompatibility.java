@@ -149,8 +149,7 @@ public class TestOrcCompatibility {
 
   @Test
   public void testOrcDumpMeta() throws Exception {
-    // read all versions of parquet files and convert them into csv
-    // diff the csvs with original csvs
+    // read all versions of orc files and dump the metadata
     File[] originalCsvFiles = Utils.getAllOriginalCSVFiles();
     String[] compatibleVersions = Utils.getAllPreviousVersionDirs();
     String version = "1.4.0"; // compatibleVersions[0];

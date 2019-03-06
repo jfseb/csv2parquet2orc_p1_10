@@ -13,7 +13,7 @@ Stripe Statistics:
     Column 3: count: 3 hasNull: false bytesOnDisk: 5 min: 123 max: 123 sum: 369
     Column 4: count: 3 hasNull: false bytesOnDisk: 16 min: 11.22 max: 11.22 sum: 33.660000000000004
     Column 5: count: 3 hasNull: false bytesOnDisk: 11 min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
-    Column 6: count: 3 hasNull: false bytesOnDisk: 21 min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0 min UTC: 2017-03-02 01:13:30.0 max UTC: 2017-07-08 01:45:30.0
+    Column 6: count: 3 hasNull: false bytesOnDisk: 21 min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0 min UTC: 2017-03-02 00:13:30.0 max UTC: 2017-07-07 23:45:30.0
 
 File Statistics:
   Column 0: count: 3 hasNull: false
@@ -22,10 +22,10 @@ File Statistics:
   Column 3: count: 3 hasNull: false bytesOnDisk: 5 min: 123 max: 123 sum: 369
   Column 4: count: 3 hasNull: false bytesOnDisk: 16 min: 11.22 max: 11.22 sum: 33.660000000000004
   Column 5: count: 3 hasNull: false bytesOnDisk: 11 min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
-  Column 6: count: 3 hasNull: false bytesOnDisk: 21 min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0 min UTC: 2017-03-02 01:13:30.0 max UTC: 2017-07-08 01:45:30.0
+  Column 6: count: 3 hasNull: false bytesOnDisk: 21 min: 2017-03-02 00:13:30.0 max: 2017-07-07 23:45:30.0 min UTC: 2017-03-02 00:13:30.0 max UTC: 2017-07-07 23:45:30.0
 
 Stripes:
-  Stripe: offset: 3 data: 86 rows: 3 tail: 106 index: 214
+  Stripe: offset: 3 data: 86 rows: 3 tail: 92 index: 214
     Stream: column 0 section ROW_INDEX start: 3 length 11
     Stream: column 1 section ROW_INDEX start: 14 length 24
     Stream: column 2 section ROW_INDEX start: 38 length 39
@@ -50,7 +50,7 @@ Stripes:
     Encoding column 5: DIRECT
     Encoding column 6: DIRECT_V2
 
-File length: 824 bytes
+File length: 810 bytes
 Padding length: 0 bytes
 Padding ratio: 0%
 ________________________________________________________________________________________________________________________

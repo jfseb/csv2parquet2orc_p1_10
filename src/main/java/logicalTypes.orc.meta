@@ -1,0 +1,49 @@
+Structure for target/orc/logicalTypes.plain.orc
+File Version: 0.12 with ORC_135
+Rows: 3
+Compression: ZLIB
+Compression size: 262144
+Type: struct<adate:date,anotherdate:date,atime_millis:smallint,btime_millis:smallint,atime_micros:int>
+
+Stripe Statistics:
+  Stripe 1:
+    Column 0: count: 3 hasNull: false
+    Column 1: count: 3 hasNull: false bytesOnDisk: 11 min: 2017-03-05 max: 2017-07-07
+    Column 2: count: 3 hasNull: false bytesOnDisk: 11 min: 1915-12-22 max: 2025-02-11
+    Column 3: count: 3 hasNull: false bytesOnDisk: 9 min: 85530000000 max: 85530000000 sum: 256590000000
+    Column 4: count: 3 hasNull: false bytesOnDisk: 17 min: 85530000123 max: 85530000423 sum: 256590000669
+    Column 5: count: 3 hasNull: false bytesOnDisk: 18 min: 85530123456 max: 85530654321 sum: 256590901233
+
+File Statistics:
+  Column 0: count: 3 hasNull: false
+  Column 1: count: 3 hasNull: false bytesOnDisk: 11 min: 2017-03-05 max: 2017-07-07
+  Column 2: count: 3 hasNull: false bytesOnDisk: 11 min: 1915-12-22 max: 2025-02-11
+  Column 3: count: 3 hasNull: false bytesOnDisk: 9 min: 85530000000 max: 85530000000 sum: 256590000000
+  Column 4: count: 3 hasNull: false bytesOnDisk: 17 min: 85530000123 max: 85530000423 sum: 256590000669
+  Column 5: count: 3 hasNull: false bytesOnDisk: 18 min: 85530123456 max: 85530654321 sum: 256590901233
+
+Stripes:
+  Stripe: offset: 3 data: 66 rows: 3 tail: 60 index: 178
+    Stream: column 0 section ROW_INDEX start: 3 length 11
+    Stream: column 1 section ROW_INDEX start: 14 length 26
+    Stream: column 2 section ROW_INDEX start: 40 length 26
+    Stream: column 3 section ROW_INDEX start: 66 length 37
+    Stream: column 4 section ROW_INDEX start: 103 length 39
+    Stream: column 5 section ROW_INDEX start: 142 length 39
+    Stream: column 1 section DATA start: 181 length 11
+    Stream: column 2 section DATA start: 192 length 11
+    Stream: column 3 section DATA start: 203 length 9
+    Stream: column 4 section DATA start: 212 length 17
+    Stream: column 5 section DATA start: 229 length 18
+    Encoding column 0: DIRECT
+    Encoding column 1: DIRECT_V2
+    Encoding column 2: DIRECT_V2
+    Encoding column 3: DIRECT_V2
+    Encoding column 4: DIRECT_V2
+    Encoding column 5: DIRECT_V2
+
+File length: 622 bytes
+Padding length: 0 bytes
+Padding ratio: 0%
+________________________________________________________________________________________________________________________
+

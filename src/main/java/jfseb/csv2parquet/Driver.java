@@ -179,6 +179,10 @@ public class Driver {
     Properties confSettings = options.genericOptions.getOptionProperties("D");
     for (Map.Entry pair : confSettings.entrySet()) {
       String arr[] = pair.getKey().toString().split("=");
+      if ( arr.length != 2)
+      {
+        System.err.println(" Could not parse option " + pair.getKey().toString()  + " expecting " + "-Dabc=def");
+      }
       conf.set(arr[0], arr[1]);
       // pair.getKey().toString(), pair.getValue().toString());
     }

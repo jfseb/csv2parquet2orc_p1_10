@@ -84,6 +84,7 @@ public class ConvertUtils {
     String schemaString = ConvertToolBase.getDefaultSchemaByFile(csvFile, ConvertToolBase.Format.PARQUET);
 
     CSVOptions csvOptions = new CSVOptions();
+    csvOptions.csvFormatBinary = true; 
     csvOptions.csvSeparatorAsString = ConvertUtils.DEFAULT_CSV_DELIMITER;
     convertCsvToParquet(csvFile, outputParquetFile, schemaString, enableDictionary, csvOptions,
         null);

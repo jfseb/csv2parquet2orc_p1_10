@@ -1,0 +1,57 @@
+Structure for target/orc/simpletypes_hex.plain.orc
+File Version: 0.12 with ORC_135
+Rows: 3
+Compression: ZLIB
+Compression size: 262144
+Type: struct<along:int,aname:string,anint32:smallint,adouble:double,afloat:float,atimestamp:timestamp>
+
+Stripe Statistics:
+  Stripe 1:
+    Column 0: count: 3 hasNull: false
+    Column 1: count: 3 hasNull: false bytesOnDisk: 5 min: 1 max: 1 sum: 3
+    Column 2: count: 3 hasNull: false bytesOnDisk: 33 min: ABC max: Customer#000000001 sum: 39
+    Column 3: count: 3 hasNull: false bytesOnDisk: 5 min: 123 max: 123 sum: 369
+    Column 4: count: 3 hasNull: false bytesOnDisk: 16 min: 11.22 max: 11.22 sum: 33.660000000000004
+    Column 5: count: 3 hasNull: false bytesOnDisk: 11 min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
+    Column 6: count: 3 hasNull: false bytesOnDisk: 28 min: 1970-01-01 00:19:53.046 max: 2017-07-07 23:45:30.0 min UTC: 1970-01-01 00:19:53.046 max UTC: 2017-07-07 23:45:30.0
+
+File Statistics:
+  Column 0: count: 3 hasNull: false
+  Column 1: count: 3 hasNull: false bytesOnDisk: 5 min: 1 max: 1 sum: 3
+  Column 2: count: 3 hasNull: false bytesOnDisk: 33 min: ABC max: Customer#000000001 sum: 39
+  Column 3: count: 3 hasNull: false bytesOnDisk: 5 min: 123 max: 123 sum: 369
+  Column 4: count: 3 hasNull: false bytesOnDisk: 16 min: 11.22 max: 11.22 sum: 33.660000000000004
+  Column 5: count: 3 hasNull: false bytesOnDisk: 11 min: 11.220000267028809 max: 11.220000267028809 sum: 33.660000801086426
+  Column 6: count: 3 hasNull: false bytesOnDisk: 28 min: 1970-01-01 00:19:53.046 max: 2017-07-07 23:45:30.0 min UTC: 1970-01-01 00:19:53.046 max UTC: 2017-07-07 23:45:30.0
+
+Stripes:
+  Stripe: offset: 3 data: 98 rows: 3 tail: 95 index: 214
+    Stream: column 0 section ROW_INDEX start: 3 length 11
+    Stream: column 1 section ROW_INDEX start: 14 length 24
+    Stream: column 2 section ROW_INDEX start: 38 length 41
+    Stream: column 3 section ROW_INDEX start: 79 length 27
+    Stream: column 4 section ROW_INDEX start: 106 length 40
+    Stream: column 5 section ROW_INDEX start: 146 length 39
+    Stream: column 6 section ROW_INDEX start: 185 length 32
+    Stream: column 1 section DATA start: 217 length 5
+    Stream: column 2 section DATA start: 222 length 6
+    Stream: column 2 section LENGTH start: 228 length 7
+    Stream: column 2 section DICTIONARY_DATA start: 235 length 20
+    Stream: column 3 section DATA start: 255 length 5
+    Stream: column 4 section DATA start: 260 length 16
+    Stream: column 5 section DATA start: 276 length 11
+    Stream: column 6 section DATA start: 287 length 17
+    Stream: column 6 section SECONDARY start: 304 length 11
+    Encoding column 0: DIRECT
+    Encoding column 1: DIRECT_V2
+    Encoding column 2: DICTIONARY_V2[2]
+    Encoding column 3: DIRECT_V2
+    Encoding column 4: DIRECT
+    Encoding column 5: DIRECT
+    Encoding column 6: DIRECT_V2
+
+File length: 819 bytes
+Padding length: 0 bytes
+Padding ratio: 0%
+________________________________________________________________________________________________________________________
+

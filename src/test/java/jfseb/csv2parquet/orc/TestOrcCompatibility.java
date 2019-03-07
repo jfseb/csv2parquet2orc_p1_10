@@ -83,7 +83,7 @@ public class TestOrcCompatibility {
 
       // With no dictionary - default
       File orcTestFile = Utils.getOrcOutputFile(filename, "plain", true);
-      String[] args = { "convert", "-S", "|", csvFile.toString(), "-o", orcTestFile.toString() };
+      String[] args = {  "-D", "csvformat=binary" , "convert", "-S", "|", csvFile.toString(), "-o", orcTestFile.toString() };
       Driver.main(args);
       // ConvertUtils.convertCsvToParquet(csvFile, orcTestFile);
       File csvTestFile = Utils.getCsvTestFile(filename, "plain", true);

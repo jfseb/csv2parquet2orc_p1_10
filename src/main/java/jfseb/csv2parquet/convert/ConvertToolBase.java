@@ -233,6 +233,13 @@ public class ConvertToolBase {
     this.csvOptions.csvSeparatorAsChar = this.csvOptions.csvSeparatorAsString.charAt(0);
     this.csvOptions.csvHeaderLines = getIntOption(opts, 'H', 0);
     this.csvOptions.csvFormatBinary = getStringOption(opts,'f', "default").toLowerCase().equals("binary");
+      if (conf != null) {
+      String inputbin = conf.get("csvformat","default");
+      if( "binary".equals(inputbin) || "BINARY".equals(inputbin)) {
+        this.csvOptions.csvFormatBinary = true;
+      }
+    }
+    
     this.csvOptions.csvNullString = opts.getOptionValue('n', "");
     String filename = getDefaultOutFileName(target);
     this.outFileName = opts.hasOption('o') ? opts.getOptionValue('o') : filename;

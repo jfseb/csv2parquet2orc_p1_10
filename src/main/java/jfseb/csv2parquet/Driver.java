@@ -181,7 +181,8 @@ public class Driver {
       String arr[] = pair.getKey().toString().split("=");
       if ( arr.length != 2)
       {
-        System.err.println(" Could not parse option " + pair.getKey().toString()  + " expecting " + "-Dabc=def");
+        System.err.println("Expecting --define option=value, got " + pair.getKey().toString() );
+        System.exit(-1);
       }
       conf.set(arr[0], arr[1]);
       // pair.getKey().toString(), pair.getValue().toString());

@@ -112,6 +112,7 @@ the following is a subset of options
 | --- | --- | --- | --- | --- |
 | explicit schema file spec | -s abc.schema.orc | yes | yes | |
 | Skip header lines | -H 1 | yes | yes | |
+| Null string | -n '' | yes | yes |  |
 | Separator | -S '\|' | yes | yes |  |
 | Binary 0x12EFx0 (1) |  -Dcsvformat=binary | yes | yes(2) | |
 

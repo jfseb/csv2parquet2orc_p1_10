@@ -86,6 +86,7 @@ public class ConvertUtils {
     CSVOptions csvOptions = new CSVOptions();
     csvOptions.csvFormatBinary = true; 
     csvOptions.csvSeparatorAsString = ConvertUtils.DEFAULT_CSV_DELIMITER;
+    csvOptions.csvNullString = "?";
     convertCsvToParquet(csvFile, outputParquetFile, schemaString, enableDictionary, csvOptions,
         null);
   }
@@ -148,6 +149,10 @@ public class ConvertUtils {
 
     BufferedReader br = new BufferedReader(getReader(new FileInputStream(csvFile), csvFile));
     String line;
+    if ( csvOptions.csvNullString == null )
+    {
+      csvOptions.csvNullString = "";
+    }
     int lineNumber = 0;
     try {
       while ((line = br.readLine()) != null) {
@@ -155,9 +160,19 @@ public class ConvertUtils {
           String[] fields = line.split(Pattern.quote(CSV_DELIMITER));
   
           int cols = schema.getColumns().size();
+          if ( csvOptions.csvNullString != null )
+          {
+            for( int i = 0; i < fields.length; ++i )
+            {
+              if ( fields[ i ] == csvOptions.csvNullString )
+              {
+                fields[ i ] = null;
+              }
+            }
+          }
           ArrayList<String> lst = new ArrayList<String>(Arrays.asList(fields)); // Arrays.asList(fields);
           while (lst.size() < cols) {
-            lst.add("");
+            lst.add(null);
           }
           while (lst.size() > cols) {
             lst.remove(lst.size() - 1);

@@ -85,7 +85,8 @@ public class CsvWriteSupport extends WriteSupport<List<String>> {
 
       try {
         // val.length() == 0 indicates a NULL value.
-        if (val.length() > 0) {
+        if ( val != null ) // val.length() > 0) 
+        {
           recordConsumer.startField(cols.get(i).getPath()[0], i);
           try {
             ParseHexRec.ParsedRec rec = null;

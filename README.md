@@ -130,22 +130,15 @@ the following is a subset of options
    are interpreted as binary data. 
    
    The converter will take the binary data 
-   ( left-padding it with 0x00 
-   or truncating it from the left where required ) 
-   as big-endian data and move it into the respective column, 
+   (left-padding it with 0x00 or truncating it from the left where required) 
+   as big-endian data and move it into the respective column:
   
    so 0x41x0  will yield 'A' on a varchar column, 
    65 on an integer/long/ column etc. 
-   
-   
-   for the latter format, all columns starting with 0x and ending with x0  (e.g. 0xFFEFx0 
-   and containing an even number of contiguous hexadecimal characters  will be interpreted as 
-   binary representation.
-   The data will be interpreted as Big-Endian representation of the data  
-    (7FFF) is the value 32768 = 0x7FFF etc. 
-   Where needed, it will be left-padded with 00 or truncated to the target width. 
-   Subsequently is is interpreted as the binary representation of the data
 
+   0x7FFF0x is the value 32768 = 0x7FFF in a long/int column etc. 
+   
+   This way illegal/out of range values not accessible by the java platform types can be be inserted into the parquet file for testing.
 
 ## other commands
 
